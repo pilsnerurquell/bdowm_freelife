@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+    <script src="leaflet/Fuse-master/src/fuse.js"></script>
+    <link rel="stylesheet" href="leaflet/leaflet-fusesearch-master/src/leaflet.fusesearch.css">
+    <script src="leaflet/leaflet-fusesearch-master/src/leaflet.fusesearch.js"></script>
+    <script src="json/mapdata_geojson.js?20171112"></script>
+    <style>
+      #map {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 100%;
+      }
+    </style>
+    
+    <script>
+      function init() {
+        var mapMinZoom = 0;
+        var mapMaxZoom = 6;
+        var map = L.map('map', {
+          maxZoom: mapMaxZoom,
+          minZoom: mapMinZoom,
+          crs: L.CRS.Simple,
+        }).setView([0, 0], mapMaxZoom);
+
+        var mapBounds = new L.LatLngBounds(
+            map.unproject([0, 9216], mapMaxZoom),
+            map.unproject([11008, 0], mapMaxZoom));
+
+        map.fitBounds(mapBounds);
+        layer = L.tileLayer('maptiles/{z}/{x}/{y}.jpg', {
+          minZoom: mapMinZoom, maxZoom: mapMaxZoom,
+          bounds: mapBounds,
+        }).addTo(map);
+        
+        var popup = L.popup();
+
+        function onMapClick(e) {
+          popup
+          .setLatLng(e.latlng)
+          .setContent(e.latlng.toString())
+          .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+
+        var nodeData = L.geoJson(data,{
+            filter: function(feature, layer){
+                return(feature.properties.cat === "拠点");
+            },
+            pointToLayer: function(feature, latlng) {
+                 var nodeIcon = L.icon({
+                                   iconSize: [25, 25],
+                                   iconAnchor: [16, 16],
+                                   popupAnchor: [0, -13],
+                                   iconUrl: 'images/' + feature.properties.iconcategory + '.png'
+                 });
+                 return L.marker(latlng, {icon: nodeIcon});
+            },
+            onEachFeature: function onEachFeature(feature,layer){
+                feature.layer = layer;
+                var popupContent = feature.properties.拠点名+feature.properties.貢献度+"<br>"+
+                                   feature.properties.生産区分1+feature.properties.貢献度1+"<br>"+
+                                   feature.properties.獲得物1+"<br>"+
+                                   feature.properties.生産区分2+feature.properties.貢献度2+"<br>"+
+                                   feature.properties.獲得物2+"<br>"+
+                                   feature.properties.生産区分3+feature.properties.貢献度3+"<br>"+
+                                   feature.properties.獲得物3+"<br>"
+                                   ;
+                layer.bindPopup(popupContent);
+                var tooltipContent = popupContent;
+                layer.bindTooltip(tooltipContent);
+            }
+        }).addTo(map);
+
+        var bouekiData = L.geoJson(data,{
+            filter: function(feature, layer){
+                return(feature.properties.cat === "貿易");
+            },
+            pointToLayer: function(feature, latlng) {
+                 var bouekiIcon = L.icon({
+                                   iconSize: [20, 20],
+                                   iconAnchor: [16, 16],
+                                   popupAnchor: [0, -13],
+                                   iconUrl: 'images/boueki.png'
+                 });
+                 return L.marker(latlng, {icon: bouekiIcon,zIndexOffset: 100});
+            },
+            onEachFeature: function onEachFeature(feature,layer){
+                feature.layer = layer;
+                var bouekiContent = feature.properties.拠点名+"<br>"+
+                                   feature.properties.貢献度+"<br>"+
+                                   feature.properties.生産区分1+"<br>"+
+                                   feature.properties.獲得物1+"<br>"+
+                                   feature.properties.生産区分2+"<br>"+
+                                   feature.properties.獲得物2+"<br>"+
+                                   feature.properties.生産区分3+"<br>"+
+                                   feature.properties.獲得物3
+                                   ;
+                layer.bindPopup(bouekiContent);
+                var tooltipContent = feature.properties.拠点名;
+                layer.bindTooltip(tooltipContent);
+            }
+        });
+        
+        var saisyuuData = L.geoJson(data,{
+            filter: function(feature, layer){
+                return(feature.properties.cat === "採集");
+            },
+            pointToLayer: function(feature, latlng) {
+                 var saisyuuIcon = L.icon({
+                                   iconSize: [20, 20],
+                                   iconAnchor: [16, 16],
+                                   popupAnchor: [0, -13],
+                                   iconUrl: 'images/' + feature.properties.iconcategory + '.png'
+                 });
+                 return L.marker(latlng, {icon: saisyuuIcon,zIndexOffset: 100});
+            },
+            onEachFeature: function onEachFeature(feature,layer){
+                feature.layer = layer;
+                var saisyuuContent = feature.properties.拠点名;
+                layer.bindPopup(saisyuuContent);
+                var tooltipContent = feature.properties.拠点名;
+                layer.bindTooltip(tooltipContent);
+            }
+        });
+        
+        var syuryouData = L.geoJson(data,{
+            filter: function(feature, layer){
+                return(feature.properties.cat === "狩猟");
+            },
+            pointToLayer: function(feature, latlng) {
+                 var syuryouIcon = L.icon({
+                                   iconSize: [20, 20],
+                                   iconAnchor: [16, 16],
+                                   popupAnchor: [0, -13],
+                                   iconUrl: 'images/hoka.png'
+                 });
+                 return L.marker(latlng, {icon: syuryouIcon,zIndexOffset: 100});
+            },
+            onEachFeature: function onEachFeature(feature,layer){
+                feature.layer = layer;
+                var syuryouContent = feature.properties.拠点名;
+                layer.bindPopup(syuryouContent);
+                var tooltipContent = feature.properties.拠点名;
+                layer.bindTooltip(tooltipContent);
+            }
+        });
+
+        var fishData = L.geoJson(data,{
+            filter: function(feature, layer){
+                return(feature.properties.cat === "釣り");
+            },
+            pointToLayer: function(feature, latlng){
+                var circleOpt = {
+                        color: "#00bfff",
+                        radius: feature.properties.サイズ
+                };
+                return L.circle(latlng,circleOpt);
+            },
+            onEachFeature: function onEachFeature(feature,layer){
+                feature.layer = layer;
+                var popContent = feature.properties.拠点名+feature.properties.貢献度+"<br>"+
+                                   feature.properties.生産区分1+"<br>"+
+                                   feature.properties.獲得物1+"<br>"+
+                                   feature.properties.生産区分2+"<br>"+
+                                   feature.properties.獲得物2+"<br>"+
+                                   feature.properties.生産区分3+"<br>"+
+                                   feature.properties.獲得物3+"<br>"
+                                   ;
+                layer.bindPopup(popContent);
+                
+                var tooltipContent = feature.properties.拠点名;
+                layer.bindTooltip(tooltipContent);
+            }
+        });
+
+        var setuzokuStyle = {"color": "#f5deb3"};
+        var nodeLine = L.geoJson(setuzoku,{style: setuzokuStyle}).addTo(map);
+
+        var bossData = L.geoJson(boss,{
+            pointToLayer: function(feature,latlng){
+                 var bossIcon = L.icon({
+                                   iconSize: [40,40],
+                                   iconAnchor: [16,16],
+                                   popupAnchor: [0, -13],
+                                   iconUrl: 'images/' + feature.properties.iconcategory + '.png'
+                 });
+                 return L.marker(latlng, {icon: bossIcon,zIndexOffset: 100});
+            },
+            onEachFeature: function onEachFeature(feature,layer){
+                feature.layer = layer;
+                var bossContent = feature.properties.拠点名+"<br>"+
+                                  "<img src='images/" + feature.properties.iconcategory + ".png'>";
+                layer.bindPopup(bossContent);
+                layer.bindTooltip(bossContent);
+            }
+        });
+
+        var umaData = L.geoJson(uma,{
+            pointToLayer: function(feature,latlng){
+                 var umaIcon = L.icon({
+                                  iconSize: [25,25],
+                                  iconAnchor: [16,16],
+                                  iconUrl: 'images/uma.png'
+                 });
+                 return L.marker(latlng, {icon: umaIcon,zIndexOffset: 100});
+        }});
+
+        var mainData = L.layerGroup([nodeData, nodeLine]);
+        var overlayMaps = {
+            "拠点": mainData,
+            "貿易品": bouekiData,
+            "海域図・釣り": fishData,
+            "採集物": saisyuuData,
+            "狩猟": syuryouData,
+            "ワールドボス・召喚ボス": bossData,
+            "野生馬生息地": umaData
+        };
+        L.control.layers(null, overlayMaps).addTo(map);
+
+        var searchCtrl = L.control.fuseSearch()
+        searchCtrl.addTo(map);
+
+        searchCtrl.indexFeatures(data,['拠点名','貢献度','生産区分1','獲得物1','生産区分2','獲得物2','生産区分3','獲得物3']);
+
+
+
+      }
+    </script>
+
+  </head>
+  <body onload="init()">
+        <div id="map"></div>
+  </body>
+</html>

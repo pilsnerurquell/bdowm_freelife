@@ -45,8 +45,6 @@
           bounds: mapBounds,
         }).addTo(map);
         
-        var popup = L.popup();
-
         var nodeData = L.geoJson(data,{
             filter: function(feature, layer){
                 return(feature.properties.cat === "拠点");

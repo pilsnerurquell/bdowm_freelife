@@ -215,6 +215,7 @@ var data = {
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kiken","拠点名":"トゥースフェアリーの森","貢献度":"  : 3","生産区分1":"発掘","貢献度1":" ：2","獲得物1":"鈍い骨の欠片・森の痕跡・ベデルローナ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[59.72445,-122.5]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kiken","拠点名":"リングウッドの森","貢献度":"  : 2","生産区分1":"伐採","貢献度1":" ：2","獲得物1":"リングウッドの原木・リングウッドの樹液・リングウッドの板","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[61.92757,-116.14062]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kiken","拠点名":"灰色の森","貢献度":"  : 3","生産区分1":" ","貢献度1":" ","獲得物1":"","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[63.64632,-112.42187]}},
+{"type":"Feature","properties":{"cat":"採集","iconcategory":"ki","拠点名":"マツ・モミ・スギ"},"geometry":{"type":"Point","coordinates":[64.1377,-113.4375]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyoten","拠点名":"コーエン農場","貢献度":"  : 2","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[74.54688,-106.85937]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyoten","拠点名":"汚染された農場","貢献度":"  : 2","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[78.39063,-105.54687]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyoten","拠点名":"ガビノ農場","貢献度":"  : 2","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[76.04688,-108.10937]}},
@@ -553,10 +554,18 @@ var data = {
 {"type":"Feature","properties":{"cat":"採集","iconcategory":"niku","拠点名":"ヤク"},"geometry":{"type":"Point","coordinates":[82.74072,-122.0625]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"カルク渓谷","貢献度":"  : 1","生産区分1":"採鉱","貢献度1":"5","獲得物1":"緑青石・真銀","生産区分2":"採鉱","貢献度2":"5","獲得物2":"亜鉛鉱石・真銀","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[80.56283,-127.10938]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"ゲルビッシュ山脈","貢献度":"  : 1","生産区分1":"採集","貢献度1":"2","獲得物1":"ワラビ","生産区分2":"採集","貢献度2":"2","獲得物2":"黎明草","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[92.52197,-119.375]}},
-{"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"ドルマン伐採場","貢献度":"  : 2","生産区分1":"伐採","貢献度1":"5","獲得物1":"コノテガシワの原木・コノテガシワｍ板・コノテガシワ樹液","生産区分2":"伐採","貢献度2":"5","獲得物2":"モミの木原木・モミの木の板・モミの木樹液","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[89.99072,-116.35937]}},
+{"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"ドルマン伐採場","貢献度":"  : 2","生産区分1":"伐採","貢献度1":"5","獲得物1":"コノテガシワの原木・コノテガシワ板・コノテガシワ樹液","生産区分2":"伐採","貢献度2":"5","獲得物2":"モミの木原木・モミの木の板・モミの木樹液","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[89.99072,-116.35937]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"トシュラ廃墟","貢献度":"  : 2","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[97.6001,-118.57812]}},
 {"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"ヒムット伐採場","貢献度":"  : 2","生産区分1":"伐採","貢献度1":"5","獲得物1":"マツの木の原木・マツの木板・マツの木樹液","生産区分2":"伐採","貢献度2":"5","獲得物2":"シラカバの原木・シラカバ板・シラカバ樹液","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[98.11572,-115.28125]}},
 {"type":"Feature","properties":{"cat":"採集","iconcategory":"ki","拠点名":"スギ"},"geometry":{"type":"Point","coordinates":[97.50635,-116.05729]}},
+{"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"ブレーリン農場","貢献度":"  : 2","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[68.89697,-103.29687]}},
+{"type":"Feature","properties":{"cat":"採集","iconcategory":"kusa","拠点名":"ブドウ・トウモロコシ"},"geometry":{"type":"Point","coordinates":[68.6001,-102.75]}},
+{"type":"Feature","properties":{"cat":"拠点","iconcategory":"kyotenn","拠点名":"前線基地補給港","貢献度":"  : 2","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[66.58447,-102.73437]}},
+{"type":"Feature","properties":{"cat":"採集","iconcategory":"niku","拠点名":"エルク"},"geometry":{"type":"Point","coordinates":[67.1626,-103.34375]}},
+{"type":"Feature","properties":{"cat":"採集","iconcategory":"ki","拠点名":"シラカバ・マツ"},"geometry":{"type":"Point","coordinates":[67.05322,-102.96875]}},
+{"type":"Feature","properties":{"cat":"拠点","iconcategory":"toride","拠点名":"カルフェオン北西部前線基地","貢献度":"  : 3","生産区分1":" ","貢献度1":" ","獲得物1":" ","生産区分2":" ","貢献度2":" ","獲得物2":" ","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[66.93864,-104.10417]}},
+{"type":"Feature","properties":{"cat":"拠点","iconcategory":"kiken","拠点名":"星の墓場","貢献度":"  : 3","生産区分1":"発掘","貢献度1":"1","獲得物1":"純粋な魔力の塊・暴力の痕跡・死の痕跡","生産区分2":"採鉱","貢献度2":"1","獲得物2":"砕けた星の欠片・銅鉱石・溶けた銅の欠片","生産区分3":" ","貢献度3":" ","獲得物3":" "},"geometry":{"type":"Point","coordinates":[64.1001,-108.10937]}},
+{"type":"Feature","properties":{"cat":"採集","iconcategory":"niku","拠点名":"ヤギ"},"geometry":{"type":"Point","coordinates":[67.84489,-108.32812]}},
 
 
 {"type":"Feature","properties":{"cat":"狩猟","iconcategory":"hoka","拠点名":"ヤク"},"geometry":{"type":"Point","coordinates":[87.30843,-116.93229]}},
@@ -681,7 +690,7 @@ var data = {
 "生産区分2":"緑枠　：オヤビッチャ・キントキダイ・トビウオ",
 "獲得物2":"白枠　：アジ・イカナゴ・カサゴ・サンマ・ボラ・わかめ・骨だけ残った魚",
 "生産区分3":"カモメ：シーラカンス・スズメダイ・タイ・ナメラフグ",
-"獲得物3":"銛　　：マッコウクジラ・ジンベイザメ・ノコギリザメ・マトウダイ・オナガアカイサキ・ボラ"},
+"獲得物3":"マッコウクジラ・ジンベイザメ・ノコギリザメ・マトウダイ・オナガアカイサキ・ボラ"},
 "geometry":{"type":"Polygon","coordinates":[
 [[73.0625,-98.04687],[71.67188,-95.96875],[70.01563,-95.5],[68.25,-96.8125],[68.92188,-102.17187],[69.8125,-103.76562],[70.375,-103.64062],[70.40625,-102.39062],[71.59375,-101.39062],[73.0625,-98.04687]],
 [[70.5625,-98.29687],[70.03125,-98.60937],[70.03125,-98.89062],[70.65625,-99.42187],[70.9375,-99.14062],[71,-98.82812],[70.96875,-98.51562],[70.8125,-98.35937],[70.5625,-98.29687]],
@@ -8278,13 +8287,13 @@ var boss = {
 "type":"FeatureCollection",
 "features": [
 {"type":"Feature","properties":{"iconcategory":"rednose2","拠点名":"インプ隊長召喚書<br>レッドノーズ"},"geometry":{"type":"Point","coordinates":[89.04688,-99.26562]}},
-{"type":"Feature","properties":{"iconcategory":"rednose","拠点名":"ＷＢ<br>レッドノーズ"},"geometry":{"type":"Point","coordinates":[88.23438,-100.5625]}},
+{"type":"Feature","properties":{"iconcategory":"rednose","拠点名":"ＦＢ<br>レッドノーズ"},"geometry":{"type":"Point","coordinates":[88.23438,-100.5625]}},
 {"type":"Feature","properties":{"iconcategory":"gias","拠点名":"ゴブリン族長召喚書<br>ギアス"},"geometry":{"type":"Point","coordinates":[95.40625,-100.92187]}},
 {"type":"Feature","properties":{"iconcategory":"beg2","拠点名":"祭壇インプ隊長召喚書<br>ベグ"},"geometry":{"type":"Point","coordinates":[89.4375,-105.875]}},
-{"type":"Feature","properties":{"iconcategory":"beg","拠点名":"ＷＢ<br>ベグ"},"geometry":{"type":"Point","coordinates":[88.78125,-106.6875]}},
+{"type":"Feature","properties":{"iconcategory":"beg","拠点名":"ＦＢ<br>ベグ"},"geometry":{"type":"Point","coordinates":[88.78125,-106.6875]}},
 {"type":"Feature","properties":{"iconcategory":"maskan","拠点名":"修道院リーダー召喚書<br>マスカン"},"geometry":{"type":"Point","coordinates":[90.45947,-114.3125]}},
 {"type":"Feature","properties":{"iconcategory":"gudon2","拠点名":"愚鈍な木の精霊召喚書<br>愚鈍な木の精霊"},"geometry":{"type":"Point","coordinates":[83.21875,-107.39062]}},
-{"type":"Feature","properties":{"iconcategory":"gudon","拠点名":"ＷＢ<br>愚鈍な木の精霊"},"geometry":{"type":"Point","coordinates":[89.4375,-102.51562]}},
+{"type":"Feature","properties":{"iconcategory":"gudon","拠点名":"ＦＢ<br>愚鈍な木の精霊"},"geometry":{"type":"Point","coordinates":[89.4375,-102.51562]}},
 {"type":"Feature","properties":{"iconcategory":"hessamarry","拠点名":"恐怖の魔女召喚書<br>ヘッサ・マリー"},"geometry":{"type":"Point","coordinates":[81.04688,-119.34375]}},
 {"type":"Feature","properties":{"iconcategory":"feread","拠点名":"ＧＢ<br>フェリード"},"geometry":{"type":"Point","coordinates":[106.6875,-104.71875]}},
 {"type":"Feature","properties":{"iconcategory":"karanda","拠点名":"ＷＢ<br>カランダ"},"geometry":{"type":"Point","coordinates":[84.38135,-101.625]}},
@@ -8292,7 +8301,7 @@ var boss = {
 {"type":"Feature","properties":{"iconcategory":"nubel","拠点名":"ＷＢ<br>ヌーベル"},"geometry":{"type":"Point","coordinates":[133.90625,-100.8125]}},
 {"type":"Feature","properties":{"iconcategory":"kutum","拠点名":"ＷＢ<br>古代のクツム"},"geometry":{"type":"Point","coordinates":[121.5,-94.625]}},
 {"type":"Feature","properties":{"iconcategory":"madman","拠点名":"ＧＢ<br>マッドマン"},"geometry":{"type":"Point","coordinates":[94.0625,-110.0625]}},
-{"type":"Feature","properties":{"iconcategory":"madman","拠点名":"ＷＢ<br>マッドマン"},"geometry":{"type":"Point","coordinates":[95.15625,-108.76562]}},
+{"type":"Feature","properties":{"iconcategory":"madman","拠点名":"ＦＢ<br>マッドマン"},"geometry":{"type":"Point","coordinates":[95.15625,-108.76562]}},
 {"type":"Feature","properties":{"iconcategory":"kodai","拠点名":"古代遺跡の結晶召喚書"},"geometry":{"type":"Point","coordinates":[77.80599,-113.6875]}},
 {"type":"Feature","properties":{"iconcategory":"kalty","拠点名":"カルティアンの呪術書"},"geometry":{"type":"Point","coordinates":[107.24349,-102.26562]}},
 {"type":"Feature","properties":{"iconcategory":"firape","拠点名":"フィラ・ペの呪術書"},"geometry":{"type":"Point","coordinates":[114.46224,-102.09375]}},
@@ -8301,7 +8310,10 @@ var boss = {
 {"type":"Feature","properties":{"iconcategory":"baltara","拠点名":"バルタラ：修練の書"},"geometry":{"type":"Point","coordinates":[71.22786,-12078125]}},
 {"type":"Feature","properties":{"iconcategory":"forest","拠点名":"フォレストロナロスの守護者召喚書<br>ローニン"},"geometry":{"type":"Point","coordinates":[64.61572,-123.46875]}},
 {"type":"Feature","properties":{"iconcategory":"gaipin","拠点名":"ガイピンラーシア突撃隊長の召喚書<br>ウルゴン"},"geometry":{"type":"Point","coordinates":[62.33447,-135.29687]}},
-{"type":"Feature","properties":{"iconcategory":"opin","拠点名":"ＧＢ<br>古代の契約書：ミルの木の監視者"},"geometry":{"type":"Point","coordinates":[67.19661,-121.76562]}}
+{"type":"Feature","properties":{"iconcategory":"opin","拠点名":"ＧＢ<br>古代の契約書：ミルの木の監視者"},"geometry":{"type":"Point","coordinates":[67.19661,-121.76562]}},
+{"type":"Feature","properties":{"iconcategory":"garmos","拠点名":"ＷＢ<br>ガーモス"},"geometry":{"type":"Point","coordinates":[90.79395,-120.96875]}},
+{"type":"Feature","properties":{"iconcategory":"bell","拠点名":"ＷＢ<br>大洋の心臓ベル"},"geometry":{"type":"Point","coordinates":[87.87956,-46.3125]}},
+{"type":"Feature","properties":{"iconcategory":"libull","拠点名":"リブル"},"geometry":{"type":"Point","coordinates":[93.05843,-123.36458]}}
 ]};
 
 var uma = {
@@ -8444,5 +8456,7 @@ var setuzoku = {
 [[92.28678,-125.35417],[89.25635,-125.82292],[87.51595,-123.39062],[87.2347,-121.82812],[90.58447,-121.65625],[93.25635,-122.20312],[95.7251,-122.70312]],
 [[87.92822,-126.53125],[89.25635,-125.82292],[93.25635,-122.20312],[97.6001,-118.57812],[98.11572,-115.28125],[98.58447,-117.9375]],
 [[90.58447,-121.65625],[92.52197,-119.375],[89.99072,-116.35937]],
-[[94.1875,-113.03125],[98.11572,-115.28125],[103.32813,-111.45312]]
+[[94.1875,-113.03125],[98.11572,-115.28125],[103.32813,-111.45312]],
+[[72.90625,-107.42187],[68.83697,-103.29687],[66.93864,-104.10417],[66.58447,-102.73437]],
+[[66.93864,-104.10417],[64.1001,-108.10937],[63.64632,-112.42187]]
 ]}}]};

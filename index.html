@@ -18,10 +18,14 @@
     <link rel="stylesheet" href="leaflet/leaflet-fusesearch-master/src/leaflet.fusesearch.css">
     <script src="leaflet/leaflet-fusesearch-master/src/leaflet.fusesearch.js"></script>
     <script src="json/mapdata_geojson.js?20171112"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
     <style>
       #map {
-            height: 750px;
-            width: 1380px;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 100%;
       }
     </style>
     
@@ -225,7 +229,12 @@
 
         searchCtrl.indexFeatures(data,['拠点名','貢献度','生産区分1','獲得物1','生産区分2','獲得物2','生産区分3','獲得物3']);
 
-
+        map.addControl(new L.Control.Fullscreen({
+                title: {
+                        "false": "最大化",
+                        "ture":"元に戻す"
+                }
+        }));
 
       }
     </script>
